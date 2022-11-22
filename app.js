@@ -1,24 +1,34 @@
-function cambiar() {
-    if (document.getElementById("body").style.background == "white") {
-        document.getElementById("body").style.background = "black";
-    } else {
-        document.getElementById("body").style.background = "white";
-    }
-    return;
-}
+/*
+*/
+"use script"
+const ul = document.querySelector("ul");
 
-function ocultar() {
-    let element = document.getElementById('prubasjs');
-    element.style.display = 'none';
-}
+//buena forma 
 
-function mostrar() {
-    let element = document.getElementById('prubasjs');
-    element.style.display = 'block';
-}
+function frames() {
+    const animacion = ul.animate([
+        //keyframes
+        { transform: "TranslateY(0px)" },
+        { transform: "TranslateY(-100px)" }
 
-function hoja() {
-    let element = document.getElementById('estilosxºsheet');
-    element.style.href = 'estilos2.css';
+
+    ], {    //options
+        easing: "linear",
+        iterations: 1,
+        duration: 300 //milisegundos 
+    });
+    return animacion.finished;
 
 }
+
+function displace() {
+    frames()
+        .then((res) => {
+            console.log(res);
+            ul.appendChild(document.querySelectorAll("ul > li")[0])
+        })
+}
+
+setInterval(() => {
+    displace();
+}, 1000);

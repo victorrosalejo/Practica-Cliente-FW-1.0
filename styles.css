@@ -1,0 +1,50 @@
+#body {
+    background-color: rgb(59, 57, 57);
+    margin: 0%;
+}
+
+
+.container {
+
+    display: block;
+    max-width: 1200px;
+    width: 70%;
+    margin: 350px 0px auto;
+    height: 600px;
+}
+
+.w-100 {
+    width: 100%;
+
+}
+
+.contenedor-list {
+    text-align: center;
+    overflow: hidden;
+    width: auto;
+    height: 150px;
+}
+
+.contenedor-list>ul {
+    list-style-type: none;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+.contenedor-list>ul>li {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100px;
+    font-weight: bold;
+    color: rgb(47, 195, 180);
+    text-shadow: 4px 4px 7px grey;
+}
+
+.thisis {
+    margin: 350px auto auto;
+    text-align: right;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 100px;
+    color: rgb(233, 55, 55);
+    margin-right: -50px;
+}
