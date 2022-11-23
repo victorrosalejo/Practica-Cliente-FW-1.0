@@ -1,34 +1,20 @@
-/*
-*/
-"use script"
-const ul = document.querySelector("ul");
+$(document).ready(function () {
+    $('')
 
-//buena forma 
-
-function frames() {
-    const animacion = ul.animate([
-        //keyframes
-        { transform: "TranslateY(0px)" },
-        { transform: "TranslateY(-100px)" }
+});
 
 
-    ], {    //options
-        easing: "linear",
-        iterations: 1,
-        duration: 300 //milisegundos 
-    });
-    return animacion.finished;
+function chtch() {
+    var dato1 = document.getElementById(" ").value;
+    var dato2 = document.getElementById(" ").value;
+
+    if (dato1 == "") {
+        alert("Es obligatorio introducir un nombre");
+        document.getElementById("id dato1").focus();
+    } else {
+        alert("Es obligatorio introducir un nombre");
+        document.getElementById("id dato2").focus();
+    }
+
 
 }
-
-function displace() {
-    frames()
-        .then((res) => {
-            console.log(res);
-            ul.appendChild(document.querySelectorAll("ul > li")[0])
-        })
-}
-
-setInterval(() => {
-    displace();
-}, 1000);
