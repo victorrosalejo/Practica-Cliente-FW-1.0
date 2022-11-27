@@ -7,81 +7,89 @@
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-    <link id="estilosxºsheet" type="text/css" rel="stylesheet" href="styles.css" />
-    <script src="app1.js"></script>
-
-
-</head>
-
-<body id="body">
-    <!--
-    <nav class="navbar navbar-inverse"> BARRA DE ARRIBA
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">FrikiPedia</a>
-            </div>
-            <div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span
-                                class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Page 1-1</a></li>
-                            <li><a href="#">Page 1-2</a></li>
-                            <li><a href="#">Page 1-3</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Page 2</a></li>
-                    <li><a href="#">Page 3</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
--->
-
-
-    <div class="row">
-        <div class="col-md-5 thisis"> This is </div>
-
-        <div class="col-md-6">
-            <div class="container">
-                <div class="w-100 contenedor-list">
-                    <ul>
-                        <li>Crea</li>
-                        <li>Comparte</li>
-                        <li>Comenta</li>
-                        <li>Opina</li>
-                        <li>Sugiere</li>
-                        <li style="color:rgb(230, 135, 34)">Frikipedia</li>
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    </script>
 
     <script src="app.js"></script>
 
-    <button onclick="cambiar()">CHANGE</button>
+    <link id="estilosxºsheet" type="text/css" rel="stylesheet" href="styles.css" />
+</head>
+
+<body id="body">
+    <nav class=" navbar navbar-inverse">
+        <div class="container-fluid" style="height: 80px;">
+            <div class="navbar-header">
+                <h1 style="margin-left:10px ;font: normal 40px fantasy, sans-serif;color:#d35050 ;">
+                    Frikipedia
+                </h1>
+            </div>
+        </div>
+    </nav>
 
 
+    <div id="general">
+
+        <div id="portada">
+            <!--This is-->
+            <div class="Iam">
+                <p> This is </p>
+                <b>
+                    <div class="innerIam">
+                        Frikipedia <br />
+                        Comparte <br />
+                        Comenta <br />
+                        Opina <br />
+                        Sugiere
+                    </div>
+                </b>
+            </div>
+
+            <!--Arroy con movimiento-->
+            <div class="col-md-12 arrow-animation">
+                <img class="arrow" src="Imagenes\Arrow.png">
+            </div>
+            <!--Línea espaciadora-->
+            <hr class="col-md-10" style="margin-left: 7%; ">
+        </div>
+        <!--Cierre de portada-->
+
+        <div class="col-md-12" style="text-align:center; ">
+            <button id="nuevoelemento" style="width: 400px; height: 30px; "></button>
+        </div>
+
+        <div>
+            <!-- Elemento Genérico -->
+            <div style="margin-left:100px;margin-right:100px; ;">
+                <div class="col-md-6 container" style="text-align:center;" ;>
+                    <img style=" height: 400px;margin-top: 50px;" alt="centered image" src="Imagenes\Juego 1.jpg">
+                </div>
+
+                <div class="col-md-6 container">
+                    <h1 style="text-align:center;"><strong>GTA V</strong></h1>
+                    <hr style="margin-right: 30px;">
+                    <h3 class="anime-grande"><strong>DESCIPCIÓN</strong></h3>
+                    <h5 class="anime">Se trata de un juego de particulares caractrerísticas</h5>
+                    <h3><strong>AUTOR</strong></h3>
+                    <h5>Javier Bringas Loranca elemento[0].autor</h5>
+                    <h3><strong>EMAIL</strong></h3>
+                    <h5>javierbringas@urjc.es</h5>
+                    <h3><strong>OPINIÓN</strong></h3>
+                    <h5>Se trata de un juego de particulares caractrerísticas</h5>
+                    <br><br>
+                    <div style="text-align: center;">
+                        <button style="margin-right:10px;" class="btn btn-warning button" onclick="">Modificar</button>
+                        <button class="btn btn-danger button" onclick="borrar1()">Borrar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- contenedor -->
+    </div>
 
 
-
-
-
-    <!-- ANIMACION  -->
-
-
-
-
-
-
-
-
-
-
+    <div id="master">
 
 
 
