@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    $("#nuevoelemento").click(function () {
+    $("#nuevo_elemento").click(function () {
 
         let i = elemento.length + 1;    //Contador para añadir nuevas id de los elementos en el append 
 
@@ -59,8 +59,6 @@ $(document).ready(function () {
         </div>`
         );
     });
-
-
 });
 
 
@@ -77,21 +75,53 @@ function guardar(i) {
     }
     elemento.push(juego);
     borrar_formulario();
-
-
 }
 
 
 
-function mostrar() {
-    for (let i = 0; i = elemento.length; i++) {
+function borrar(m) {
+    var resultador = window.confirm("¿Seguro que quieres eliminar este elemento de forma permanente?");
+    if (resultador === true) {
 
-        if (elemento[i].opinion <> null) then
-        $(master).append(` 
+        $("#elemento" + m).remove();
+        elemento[m].title = 'undefined';
+    }
+    let contar = $('#elementos').find('div').length;   //contador de divs del elemento id= "elementos" referencia: index.html
+    if (contar == 0) {
+        console.log("hola");
+    }
+}
+
+
+
+var elemento = new Array({ imagen: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.ign.com%2Freportaje%2F100755%2Ffeature%2Flas-mejores-portadas-de-videojuegos&psig=AOvVaw0p77qnJDCcrN9T5B4-7IKA&ust=1669648953964000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCIi7kpjVzvsCFQAAAAAdAAAAABAE", titulo: "GTA V", name: "", email: "", opinion: "", descripcion: "" },
+    { imagen: "", titulo: "", name: "", email: "", opinion: "", descripcion: "" },
+    { imagen: "", titulo: "", name: "", email: "", opinion: "", descripcion: "" });
+
+
+
+
+
+function borrar_formulario() {
+    $(master).empty();
+    $(general).toggle();
+}
+
+
+
+
+function mostrar() {
+    let a = elemento.length;
+    $(elementos).empty();
+    for (let i = 0; i < a; i++) {
+
+
+        //  if (elemento[i].titulo !== undefined) then
+        $(elementos).append(` 
             <div id="elemento${i}">
-            <div style="margin-left:100px;margin-right:100px; ;">
+                <div style="margin-left:100px;margin-right:100px; ;">
                 <div class="col-md-6 container" style="text-align:center;" ;>
-                    <img style=" height: 400px;margin-top: 50px;" alt="centered image" src="Imagenes\Juego 1.jpg">
+                    <img style=" height: 400px;margin-top: 50px;" alt="centered image" src="elemento[${i}].url">
                 </div>
 
                 <div class="col-md-6 container">
@@ -107,38 +137,23 @@ function mostrar() {
                     <h5>elemento[${i}].opi</h5>
                     <br><br>
                     <div style="text-align: center;">
-                        <button style="margin-right:10px;" class="btn btn-warning button" onclick="">Modificar</button>
+                        <button style="margin-right:10px;" class="btn btn-warning button" id="modificar${i}">Modificar</button>
                         <button class="btn btn-danger button" onclick="borrar(${i})">Borrar</button>
                     </div>
                 </div>
-            </div>
-
-        </div>`
+            </div>`
         );
     };
 } //mostrar
 
 
+// $(".anime-grande").mouseenter(function () {
+//     $(".anime").slideDown();
+// });
 
-var elemento = new Array({ imagen: "Imagenes\Juego 1.jpg", titulo: "GTA V", name: "", email: "", opinion: "", descripcion: "" },
-    { imagen: "", titulo: "", name: "", email: "", opinion: "", descripcion: "" },
-    { imagen: "", titulo: "", name: "", email: "", opinion: "", descripcion: "" });
-
-
-function borrar(m) {
-    $("#elemento" + m).remove();
-    elemento[m].opi = null;
-}
-
-
-
-function borrar_formulario() {
-    $(master).empty();
-    $(general).toggle();
-}
-
-
-
+// $(".anime-grande").mouseleave(function () {
+//     $(".anime").slideUp();
+// });
 
 
 
