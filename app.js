@@ -16,8 +16,8 @@ $(document).ready(function () {
                               
                 <br>
                 <div class="form-group">
-                    <label for="url${i}" style="color:white;width:400px;">Título:</label>
-                    <input style="width:400px" type=" text" id="url${i}" placeholder="Introduce la url de la imagen" maxlength="300"
+                    <label for="url${i}" style="color:white;width:400px;">Enlace Imágen Acortado:</label>
+                    <input style="width:400px" type=" text" id="url${i}" placeholder="Introduce la url de la imagen"
                         required>
                 </div>
                 <br>
@@ -86,7 +86,7 @@ function borrar(m) {
         $("#elemento" + m).remove();
         elemento[m].title = 'undefined';
     }
-    let contar = $('#elementos').find('div').length;   //contador de divs del elemento id= "elementos" referencia: index.html
+    let contar = $('#elementos').find('div').length;   //Contador de divs del elemento id= "elementos" referencia: index.html
     if (contar == 0) {
         console.log("hola");
     }
@@ -94,11 +94,9 @@ function borrar(m) {
 
 
 
-var elemento = new Array({ imagen: "https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.ign.com%2Freportaje%2F100755%2Ffeature%2Flas-mejores-portadas-de-videojuegos&psig=AOvVaw0p77qnJDCcrN9T5B4-7IKA&ust=1669648953964000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCIi7kpjVzvsCFQAAAAAdAAAAABAE", titulo: "GTA V", name: "", email: "", opinion: "", descripcion: "" },
-    { imagen: "", titulo: "", name: "", email: "", opinion: "", descripcion: "" },
-    { imagen: "", titulo: "", name: "", email: "", opinion: "", descripcion: "" });
-
-
+var elemento = new Array({ imagen: "https://acortar.link/eBMTwB", titulo: "GTA V", name: "", email: "", opinion: "", descripcion: "" },
+    { imagen: "asdf", titulo: "asdf", name: "asdf", email: "asdf", opinion: "asdf", descripcion: "asdf" },
+    { imagen: "asd", titulo: "asdf", name: "asdf", email: "asdf", opinion: "adf", descripcion: "asdf" });
 
 
 
@@ -121,27 +119,27 @@ function mostrar() {
             <div id="elemento${i}">
                 <div style="margin-left:100px;margin-right:100px; ;">
                 <div class="col-md-6 container" style="text-align:center;" ;>
-                    <img style=" height: 400px;margin-top: 50px;" alt="centered image" src="elemento[${i}].url">
-                </div>
+                    <img style=" height: 400px;margin-top: 50px;" alt="centered image" src="${elemento[i].imagen} ">
+                </div >
 
-                <div class="col-md-6 container">
-                    <h1 style="text-align:center;"><strong>elemento[${i}].title</strong></h1>
-                    <hr style="margin-right: 30px;">
-                    <h3 class="anime-grande"><strong>DESCIPCIÓN</strong></h3>
-                    <h5 class="anime">elemento[${i}].descripcion</h5>
-                    <h3><strong>AUTOR</strong></h3>
-                    <h5>elemento[${i}].name</h5>
-                    <h3><strong>EMAIL</strong></h3>
-                    <h5>elemento[${i}].email</h5>
-                    <h3><strong>OPINIÓN</strong></h3>
-                    <h5>elemento[${i}].opi</h5>
-                    <br><br>
+            <div class="col-md-6 container">
+            <h1 style="text-align:center;"><strong>${elemento[i].titulo}</strong></h1>
+            <hr style="margin-right: 30px;">
+                <h3 class="anime-grande"><strong>DESCIPCIÓN</strong></h3>
+                <h5 class="anime">${elemento[i].descripcion}</h5>
+                <h3><strong>AUTOR</strong></h3>
+                <h5>${elemento[i].name}</h5>
+                <h3><strong>EMAIL</strong></h3>
+                <h5>${elemento[i].email}</h5>
+                <h3><strong>OPINIÓN</strong></h3>
+                <h5>${elemento[i].opi}</h5>
+                <br><br>
                     <div style="text-align: center;">
                         <button style="margin-right:10px;" class="btn btn-warning button" id="modificar${i}">Modificar</button>
                         <button class="btn btn-danger button" onclick="borrar(${i})">Borrar</button>
                     </div>
                 </div>
-            </div>`
+                </div>`
         );
     };
 } //mostrar
