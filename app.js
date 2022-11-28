@@ -62,21 +62,19 @@ function nuevo_elemento(i) {
                         class="btn btn-success" onclick="guardar(${i})">Guardar</button> 
                     <button style="margin-left: 15px; width: 100px" class="btn btn-danger" onclick="borrar_formulario()">Cancelar</button>
                     
-                </div>
+                </div>  
             </form>
         </div>`
     );
-
 }
 
 
-function mostrar_elementos(numero) {
-
-    //función que me oculta todo menos el elemento seleccionado
-
-
-}
-
+// function mostrar_elementos(numero) {
+//     $(general).toggle();
+//     $(elementos).toggle();
+//     let id = ("elemento" + numero);
+//     $(id).show();
+// }
 
 
 
@@ -138,9 +136,9 @@ function borrar(m) {
 
 
 
-var elemento = new Array({ url: "https://acortar.link/eBMTwB", titulo: "GTA V", name: "Victor Arroyo Madera", email: "victor@gmail.com", opinion: "Me ha gustado mucho jugarlo", descripcion: "Jose fecma" },
-    { url: "asdf", titulo: "asdf", name: "asdf", email: "asdf", opinion: "asdf", descripcion: "asdf" },
-    { url: "asd", titulo: "asdf", name: "asdf", email: "asdf", opinion: "adf", descripcion: "asdf" });
+var elemento = new Array({ url: "https://acortar.link/eBMTwB", titulo: "GTA V", name: "Victor Arroyo Madera", email: "victor@gmail.com", opinion: "Me ha gustado mucho jugarlo, ya que es un juego con gran dinamismo.", descripcion: "Grand Theft Auto V es un videojuego de acción-aventura desarrollado por el estudio Rockstar North y distribuido por Rockstar Games. Fue lanzado el 17 de septiembre de 2013 para las consolas PlayStation 3 y Xbox 360.​" },
+    { url: "https://acortar.link/Arczkk", titulo: "Minecraft", name: "Juan Esteban Luque", email: "juan@gmail.con", opinion: "Es un gran juego para desarrollar tu mente y creatividad.", descripcion: "Minecraft es un videojuego de construcción de tipo «mundo abierto» o sandbox creado originalmente por el sueco Markus Persson, ​ y posteriormente desarrollado por Mojang Studios." },
+    { url: "https://acortar.link/q1jDDk", titulo: "VALORANT", name: "Natalia González Mairena", email: "Natalia@gmail.com", opinion: "Es un estres de juego, recomendable para desquiciarte", descripcion: "Valorant es un hero shooter en primera persona multijugador gratuito desarrollado y publicado por Riot Games. El juego se anunció por primera vez con el nombre en clave Project A en octubre de 2019. " });
 
 
 
@@ -167,16 +165,15 @@ function mostrar() {
             $(elementos).append(` 
            
            <div id="elemento${i}">
-               
-                    <div class="col-md-6 container" style="text-align:center;">
+           <div class="col-md-6 container" style="text-align:center;">
                     <img style=" height: 400px;margin-top: 50px;" alt="centered image" src="${elemento[i].url} ">
                 </div >
 
             <div class="col-md-6 container">
             <h1 style="text-align:center;"><strong>${elemento[i].titulo}</strong></h1>
             <hr style="margin-right: 30px;">
-                <h3 class="anime-grande"><strong>DESCIPCIÓN</strong></h3>
-                <h5 class="anime">${elemento[i].descripcion}</h5>
+                <h3><strong>DESCIPCIÓN</strong></h3>
+                <h5>${elemento[i].descripcion}</h5>
                 <h3><strong>AUTOR</strong></h3>
                 <h5>${elemento[i].name}</h5>
                 <h3><strong>EMAIL</strong></h3>
@@ -187,27 +184,10 @@ function mostrar() {
                     <div style="text-align: center;">
                         <button style="margin-right:10px;" class="btn btn-warning button" onclick="nuevo_elemento(${i})" ">Modificar</button>
                         <button class="btn btn-danger button" onclick="borrar(${i})">Borrar</button>
-                        <button style="margin-left: 10px; width: 100px" class="btn btn-danger" onclick="mostrar_elemento(${i})">+Más info</button>
+                        <button style="margin-left: 10px; width: 100px" class="btn btn-danger" onclick="mostrar_elementos(${i})">+Más info</button>
                     </div>
                 </div>
-        </div>
-                `);
+        </div>`);
         }
     }
 }
-
-
-
-
-// $(".anime-grande").mouseenter(function () {
-//     $(".anime").slideDown();
-// });
-
-// $(".anime-grande").mouseleave(function () {
-//     $(".anime").slideUp();
-// });
-
-
-
-
-
