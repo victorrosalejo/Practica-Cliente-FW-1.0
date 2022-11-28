@@ -97,3 +97,11 @@
     margin-left: 40%;
     width: 400px;
 }
+
+.sin_elementos {
+    text-align: center;
+    font: normal 80px Montserrat, sans-serif;
+    color: rgb(207, 206, 201);
+    margin-top: 400px;
+    margin-bottom: 400px;
+}

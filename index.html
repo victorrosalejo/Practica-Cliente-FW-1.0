@@ -50,25 +50,23 @@
         </div>
         <!--Cierre de portada-->
 
-        <div class="col-md-12" style="text-align:center; ">
-            <button id="nuevo_elemento" style="width: 400px; height: 30px; "></button>
+        <div class="col-md-12 " style="text-align:center; ">
+            <button class="btn btn-success" onclick="nuevo_elemento()"
+                style="width: 400px; height: 60px;margin-bottom: 70px;margin-top:50px; ">NUEVO ELEMENTO</button>
         </div>
 
-        <div class="col-md-12" style="text-align:center; ">
-            <button onclick="mostrar()" style="width: 400px; height: 30px; ">MOSTRAR</button>
-        </div>
 
-        <div id="elementos">
-
-        </div>
-        <!-- contenedor -->
     </div>
 
+    <div style="display:none;" class="col-md-12 sin_elementos" id="sin_elementos">
+        <h1> Sin elementos :C</h1>
+    </div>
+
+    <div id="elementos">
+
+    </div>
 
     <div id="master">
     </div>
-
-
-
 
 </html>
